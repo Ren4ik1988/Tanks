@@ -2,8 +2,9 @@ E:\ProjectsGit\Tanks\Tanks\bin\Debug\Tanks.exe.config
 E:\ProjectsGit\Tanks\Tanks\bin\Debug\Tanks.exe
 E:\ProjectsGit\Tanks\Tanks\bin\Debug\Tanks.pdb
 E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.csprojResolveAssemblyReference.cache
-E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.MainForm.resources
 E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.Properties.Resources.resources
 E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.csproj.GenerateResource.Cache
 E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.exe
 E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.pdb
+E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.Controller_MainForm.resources
+E:\ProjectsGit\Tanks\Tanks\obj\Debug\Tanks.View.resources
