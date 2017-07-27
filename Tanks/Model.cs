@@ -8,5 +8,21 @@ namespace Tanks
 {
     class Model
     {
+        int sizeField;
+        int amountTanks;
+        int amountApples;
+        int speedGame;
+
+        Tank tank;
+
+        public Model(int sizeField, int amountTanks, int amountApples, int speedGame)
+        {
+            this.sizeField = sizeField;
+            this.amountTanks = amountTanks;
+            this.amountApples = amountApples;
+            this.speedGame = speedGame;
+
+            tank = new Tank();
+        }
     }
 }

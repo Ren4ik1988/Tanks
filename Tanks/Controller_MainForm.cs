@@ -13,6 +13,7 @@ namespace Tanks
     public partial class Controller_MainForm : Form
     {
         View view;
+        Model model;
 
         public Controller_MainForm(): this(260) { }
         public Controller_MainForm(int sizeField): this (sizeField, 5) { }
@@ -21,6 +22,8 @@ namespace Tanks
         public Controller_MainForm(int sizeField, int amountTanks, int amountApples, int speedGame)
         {
             InitializeComponent();
+            model = new Model(sizeField, amountTanks, amountApples, speedGame);
+
             view = new View();
             this.Controls.Add(view);
         }
