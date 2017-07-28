@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Tanks
 {
@@ -14,6 +15,8 @@ namespace Tanks
     {
         View view;
         Model model;
+
+        Thread modelPlay;
 
         public Controller_MainForm(): this(260) { }
         public Controller_MainForm(int sizeField): this (sizeField, 5) { }
@@ -24,8 +27,14 @@ namespace Tanks
             InitializeComponent();
             model = new Model(sizeField, amountTanks, amountApples, speedGame);
 
-            view = new View();
+            view = new View(model);
             this.Controls.Add(view);
+        }
+
+        private void StartStop_btn_Click(object sender, EventArgs e)
+        {
+            modelPlay = new Thread(model.Play);
+            modelPlay.Start();
         }
     }
 }
