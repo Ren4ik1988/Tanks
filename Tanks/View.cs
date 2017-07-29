@@ -27,6 +27,7 @@ namespace Tanks
         {
             //Graphics gr = CreateGraphics();
             e.Graphics.DrawImage(model.tank.img, new Point(model.tank.x, model.tank.y));
+            Invalidate();
         }
     }
 }
