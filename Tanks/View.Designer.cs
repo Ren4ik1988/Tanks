@@ -37,7 +37,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Name = "View";
             this.Size = new System.Drawing.Size(427, 404);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.View_Paint);
+            //this.Paint += new System.Windows.Forms.PaintEventHandler(this.View_Paint);
             this.ResumeLayout(false);
 
         }

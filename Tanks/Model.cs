@@ -12,7 +12,7 @@ namespace Tanks
         int sizeField;
         int amountTanks;
         int amountApples;
-        int speedGame;
+        public int speedGame;
 
         public Tank tank;
 

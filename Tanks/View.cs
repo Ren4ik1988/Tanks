@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Tanks
 {
@@ -19,15 +20,18 @@ namespace Tanks
             InitializeComponent();
 
             this.model = model;
-
-           
         }
 
-        private void View_Paint(object sender, PaintEventArgs e)
+        void Draw (PaintEventArgs e)
         {
-            //Graphics gr = CreateGraphics();
+            Thread.Sleep(model.speedGame);
             e.Graphics.DrawImage(model.tank.img, new Point(model.tank.x, model.tank.y));
             Invalidate();
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Draw(e);
         }
     }
 }
