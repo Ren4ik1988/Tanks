@@ -51,6 +51,7 @@
     <Compile Include="Controller_MainForm.Designer.cs">
       <DependentUpon>Controller_MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameStatus.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

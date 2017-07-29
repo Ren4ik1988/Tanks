@@ -33,8 +33,20 @@ namespace Tanks
 
         private void StartStop_btn_Click(object sender, EventArgs e)
         {
-            modelPlay = new Thread(model.Play);
-            modelPlay.Start();
+            if (model.gameStatus == GameStatus.playing)
+            {
+                modelPlay.Abort();
+                model.gameStatus = GameStatus.stoping;
+            }
+            else
+            {
+                model.gameStatus = GameStatus.playing;
+                modelPlay = new Thread(model.Play);
+                modelPlay.Start();
+
+                view.Invalidate();
+            }
+
         }
     }
 }

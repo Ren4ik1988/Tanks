@@ -14,6 +14,8 @@ namespace Tanks
         int amountApples;
         public int speedGame;
 
+        public GameStatus gameStatus;
+
         public Tank tank;
 
         public Model(int sizeField, int amountTanks, int amountApples, int speedGame)
@@ -24,6 +26,8 @@ namespace Tanks
             this.speedGame = speedGame;
 
             tank = new Tank();
+
+            gameStatus = GameStatus.stoping;
         }
 
         public void Play()

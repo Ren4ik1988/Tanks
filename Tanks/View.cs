@@ -24,8 +24,12 @@ namespace Tanks
 
         void Draw (PaintEventArgs e)
         {
-            Thread.Sleep(model.speedGame);
+            
             e.Graphics.DrawImage(model.tank.img, new Point(model.tank.x, model.tank.y));
+            if (model.gameStatus != GameStatus.playing)
+                return;
+
+            Thread.Sleep(model.speedGame);
             Invalidate();
         }
 
