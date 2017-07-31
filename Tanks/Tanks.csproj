@@ -52,6 +52,11 @@
       <DependentUpon>Controller_MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GameStatus.cs" />
+    <Compile Include="ICollision.cs" />
+    <Compile Include="IRun.cs" />
+    <Compile Include="ITakeAplle.cs" />
+    <Compile Include="ITrancparant.cs" />
+    <Compile Include="ITurn.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +68,8 @@
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wall.cs" />
+    <Compile Include="WallImg.cs" />
     <EmbeddedResource Include="Controller_MainForm.resx">
       <DependentUpon>Controller_MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wall.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

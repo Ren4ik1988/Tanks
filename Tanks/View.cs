@@ -22,10 +22,23 @@ namespace Tanks
             this.model = model;
         }
 
-        void Draw (PaintEventArgs e)
+        void DrawWall(PaintEventArgs e)
         {
-            
-            e.Graphics.DrawImage(model.tank.TankImg.Img, new Point(model.tank.X, model.tank.Y));
+            for (int i = 30; i < 390; i += 60)
+                for (int j = 30; j < 390; j += 60)
+                    e.Graphics.DrawImage(model.wall.Img, new Point(i, j));
+        }
+
+        void DrawTank (PaintEventArgs e)
+        {
+           e.Graphics.DrawImage(model.tank.Img, new Point(model.tank.X, model.tank.Y));
+        }
+
+        void Draw(PaintEventArgs e)
+        {
+            DrawWall(e);
+            DrawTank(e);
+
             if (model.gameStatus != GameStatus.playing)
                 return;
 

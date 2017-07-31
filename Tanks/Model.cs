@@ -17,6 +17,7 @@ namespace Tanks
         public GameStatus gameStatus;
 
         public Tank tank;
+        public Wall wall;
 
         public Model(int sizeField, int amountTanks, int amountApples, int speedGame)
         {
@@ -25,7 +26,8 @@ namespace Tanks
             this.amountApples = amountApples;
             this.speedGame = speedGame;
 
-            tank = new Tank();
+            wall = new Wall();
+            tank = new Tank(sizeField);
 
             gameStatus = GameStatus.stoping;
         }

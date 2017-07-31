@@ -18,7 +18,7 @@ namespace Tanks
 
         Thread modelPlay;
 
-        public Controller_MainForm(): this(260) { }
+        public Controller_MainForm(): this(390) { }
         public Controller_MainForm(int sizeField): this (sizeField, 5) { }
         public Controller_MainForm(int sizeField, int amountTanks): this (sizeField, amountTanks, 5) { }
         public Controller_MainForm(int sizeField, int amountTanks, int amountApples) : this(sizeField, amountTanks, amountApples, 40) { }
