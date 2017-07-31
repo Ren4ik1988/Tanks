@@ -48,5 +48,20 @@ namespace Tanks
             }
 
         }
+
+        private void Controller_MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (modelPlay != null)
+            {
+                model.gameStatus = GameStatus.stoping;
+                modelPlay.Abort();
+            }
+
+            DialogResult dr = MessageBox.Show("Вы уверены, что хотите покинуть приложение?", "Танки", MessageBoxButtons.YesNoCancel);
+            if (dr == DialogResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
+        }
     }
 }

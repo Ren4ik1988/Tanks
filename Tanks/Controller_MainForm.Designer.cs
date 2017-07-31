@@ -34,7 +34,7 @@
             // 
             // StartStop_btn
             // 
-            this.StartStop_btn.Location = new System.Drawing.Point(474, 33);
+            this.StartStop_btn.Location = new System.Drawing.Point(397, 30);
             this.StartStop_btn.Name = "StartStop_btn";
             this.StartStop_btn.Size = new System.Drawing.Size(75, 23);
             this.StartStop_btn.TabIndex = 0;
@@ -46,12 +46,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 433);
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.StartStop_btn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Controller_MainForm";
             this.Text = "Танки";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Controller_MainForm_FormClosing);
             this.ResumeLayout(false);
 
         }

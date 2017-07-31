@@ -32,7 +32,7 @@ namespace Tanks
 
         public void Play()
         {
-            while(true)
+            while(gameStatus == GameStatus.playing)
             {
                 Thread.Sleep(speedGame);
                 tank.Run();

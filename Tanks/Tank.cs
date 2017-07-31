@@ -9,9 +9,13 @@ namespace Tanks
 {
     class Tank
     {
-        public Image img = Properties.Resources.Tank;
+        int x, y;
 
-        public int x, y;
+        TankImg tankImg = new TankImg();
+
+        public TankImg TankImg { get => tankImg; }
+        public int X { get => x; }
+        public int Y { get => y; }
 
         public void Run()
         {

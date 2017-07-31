@@ -25,7 +25,7 @@ namespace Tanks
         void Draw (PaintEventArgs e)
         {
             
-            e.Graphics.DrawImage(model.tank.img, new Point(model.tank.x, model.tank.y));
+            e.Graphics.DrawImage(model.tank.TankImg.Img, new Point(model.tank.X, model.tank.Y));
             if (model.gameStatus != GameStatus.playing)
                 return;
 
