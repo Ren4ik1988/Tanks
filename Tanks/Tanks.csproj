@@ -103,19 +103,25 @@
     <None Include="Resources\MainIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Tank.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Wall.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankDown.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TankRight.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TankLeft.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankDown\TankDown.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankDown\TankDown1.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankDown\TankDown2.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankDown\TankDown3.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankLeft\TankLeft.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankLeft\TankLeft1.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankLeft\TankLeft2.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankLeft\TankLeft3.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankRight\TankRight.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankRight\TankRight1.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankRight\TankRight2.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankRight\TankRight3.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankUp\TankUp.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankUp\TankUp1.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankUp\TankUp2.bmp" />
+    <Content Include="Resources\TankGusenitsa\TankUp\TankUp3.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

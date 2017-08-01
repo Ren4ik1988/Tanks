@@ -9,31 +9,35 @@ namespace Tanks
 {
     class TankImg
     {
-        Image imgUp = Properties.Resources.TankUp;
-        Image imgDown = Properties.Resources.TankDown;
-        Image imgLeft = Properties.Resources.TankLeft;
-        Image imgRight = Properties.Resources.TankRight;
+        Image[] up = new Image[] {
+                                    Properties.Resources.TankUp,
+                                    Properties.Resources.TankUp1,
+                                    Properties.Resources.TankUp2,
+                                    Properties.Resources.TankUp3 };
 
-        //создадим свойства для каждого поля
-        public Image ImgUp
-        {
-            get { return imgUp; }
-            set { imgUp = value; }
-        }
-        public Image ImgDown
-        {
-            get { return imgDown; }
-            set { imgDown = value; }
-        }
-        public Image ImgLeft
-        {
-            get { return imgLeft; }
-            set { imgLeft = value; }
-        }
-        public Image ImgRight
-        {
-            get { return imgRight; }
-            set { imgRight = value; }
-        }
+        Image[] down = new Image[] {
+                                    Properties.Resources.TankDown,
+                                    Properties.Resources.TankDown1,
+                                    Properties.Resources.TankDown2,
+                                    Properties.Resources.TankDown3 };
+
+        Image[] left = new Image[] {
+                                    Properties.Resources.TankLeft,
+                                    Properties.Resources.TankLeft1,
+                                    Properties.Resources.TankLeft2,
+                                    Properties.Resources.TankLeft3 };
+
+        Image[] right = new Image[] {
+                                    Properties.Resources.TankRight,
+                                    Properties.Resources.TankRight1,
+                                    Properties.Resources.TankRight2,
+                                    Properties.Resources.TankRight3 };
+
+
+        //определяем свойства массивов
+        public Image[] Up { get => up; set => up = value; }
+        public Image[] Down { get => down; set => down = value; }
+        public Image[] Left { get => left; set => left = value; }
+        public Image[] Right { get => right; set => right = value; }
     }
 }

@@ -10,17 +10,20 @@ namespace Tanks
     class Tank : IRun, ITurn, ITransparent
     {
         TankImg tankImg = new TankImg();
-        Image img;
+        Image[] img;
+        Image currentImg;
 
         int x, y, direct_x, direct_y, sizeField;
 
         static Random r;
 
+        public Image CurrentImg { get => CurrentImg; }
+
         public Tank(int sizeField)
         {
             this.sizeField = sizeField;
             r = new Random();
-            img = tankImg.ImgDown;
+            img = tankImg.Down;
             Direct_x = 0;
             Direct_y = 1;
             PutImg();
@@ -28,7 +31,6 @@ namespace Tanks
             y = 120;
         }
 
-        public Image Img { get => img; }
         public int X { get => x; }
         public int Y { get => y; }
         public int Direct_x
@@ -54,7 +56,8 @@ namespace Tanks
                     direct_y = 0;
             }
         }
-
+     
+        int k;
         public void Run()
         {
             x += direct_x;
@@ -62,6 +65,7 @@ namespace Tanks
 
             if (Math.IEEERemainder(x, 60) == 0 && Math.IEEERemainder(y, 60) == 0)
                 Turn();
+
 
             Transparernt();
 
@@ -111,13 +115,13 @@ namespace Tanks
         void PutImg()
         {
             if (direct_x == 1)
-                img = tankImg.ImgRight;
+                img = tankImg.Right;
             if (direct_x == -1)
-                img = tankImg.ImgLeft;
+                img = tankImg.Left;
             if (direct_y == 1)
-                img = tankImg.ImgDown;
+                img = tankImg.Down;
             if (direct_y == -1)
-                img = tankImg.ImgUp;
+                img = tankImg.Up;
         }
     }
 }
