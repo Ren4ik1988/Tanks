@@ -63,9 +63,39 @@ namespace Tanks.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tank {
+        internal static System.Drawing.Bitmap TankDown {
             get {
-                object obj = ResourceManager.GetObject("Tank", resourceCulture);
+                object obj = ResourceManager.GetObject("TankDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TankLeft {
+            get {
+                object obj = ResourceManager.GetObject("TankLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TankRight {
+            get {
+                object obj = ResourceManager.GetObject("TankRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TankUp {
+            get {
+                object obj = ResourceManager.GetObject("TankUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -9,12 +9,31 @@ namespace Tanks
 {
     class TankImg
     {
-        Image img = Properties.Resources.Tank;
+        Image imgUp = Properties.Resources.TankUp;
+        Image imgDown = Properties.Resources.TankDown;
+        Image imgLeft = Properties.Resources.TankLeft;
+        Image imgRight = Properties.Resources.TankRight;
 
-        public Image Img
+        //создадим свойства для каждого поля
+        public Image ImgUp
         {
-            get { return img; }
-            set { img = value; }
+            get { return imgUp; }
+            set { imgUp = value; }
+        }
+        public Image ImgDown
+        {
+            get { return imgDown; }
+            set { imgDown = value; }
+        }
+        public Image ImgLeft
+        {
+            get { return imgLeft; }
+            set { imgLeft = value; }
+        }
+        public Image ImgRight
+        {
+            get { return imgRight; }
+            set { imgRight = value; }
         }
     }
 }

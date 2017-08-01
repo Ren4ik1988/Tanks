@@ -20,9 +20,10 @@ namespace Tanks
         {
             this.sizeField = sizeField;
             r = new Random();
-            img = tankImg.Img;
+            img = tankImg.ImgDown;
             Direct_x = 0;
             Direct_y = 1;
+            PutImg();
             x = 120;
             y = 120;
         }
@@ -90,6 +91,8 @@ namespace Tanks
                         Direct_x = r.Next(-1, 2);
                 }
             }
+
+            PutImg();
         }
 
         public void Transparernt()
@@ -103,6 +106,18 @@ namespace Tanks
                 y = sizeField - 61;
             if (y == sizeField-29)
                 y = 1;
+        }
+
+        void PutImg()
+        {
+            if (direct_x == 1)
+                img = tankImg.ImgRight;
+            if (direct_x == -1)
+                img = tankImg.ImgLeft;
+            if (direct_y == 1)
+                img = tankImg.ImgDown;
+            if (direct_y == -1)
+                img = tankImg.ImgUp;
         }
     }
 }
