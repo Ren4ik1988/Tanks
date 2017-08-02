@@ -17,18 +17,27 @@ namespace Tanks
 
         static Random r;
 
-        public Image CurrentImg { get => CurrentImg; }
+        public Image CurrentImg { get => currentImg; }
 
         public Tank(int sizeField)
         {
             this.sizeField = sizeField;
             r = new Random();
-            img = tankImg.Down;
             Direct_x = 0;
             Direct_y = 1;
             PutImg();
+            PutCurrentImg();
             x = 120;
             y = 120;
+        }
+
+        int k;
+        private void PutCurrentImg()
+        {
+            currentImg = img[k];
+            k++;
+            if (k == 4)
+                k = 0;
         }
 
         public int X { get => x; }
@@ -57,7 +66,6 @@ namespace Tanks
             }
         }
      
-        int k;
         public void Run()
         {
             x += direct_x;
@@ -66,6 +74,8 @@ namespace Tanks
             if (Math.IEEERemainder(x, 60) == 0 && Math.IEEERemainder(y, 60) == 0)
                 Turn();
 
+            PutImg();
+            PutCurrentImg();
 
             Transparernt();
 
