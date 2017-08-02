@@ -19,16 +19,21 @@ namespace Tanks
 
         public Image CurrentImg { get => currentImg; }
 
-        public Tank(int sizeField)
+        public Tank(int sizeField, int x, int y)
         {
             this.sizeField = sizeField;
             r = new Random();
-            Direct_x = 0;
-            Direct_y = 1;
+            Direct_x = r.Next(-1,2);
+            if (direct_x == 0)
+                while (direct_y == 0)
+                    Direct_y = r.Next(-1, 2);
+            else
+                Direct_y = 0;
+
             PutImg();
             PutCurrentImg();
-            x = 120;
-            y = 120;
+            this.x = x;
+            this.y = y;
         }
 
         int k;
