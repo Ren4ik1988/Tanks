@@ -35,9 +35,9 @@ namespace Tanks
 
 
         //определяем свойства массивов
-        public Image[] Up { get => up; set => up = value; }
-        public Image[] Down { get => down; set => down = value; }
-        public Image[] Left { get => left; set => left = value; }
-        public Image[] Right { get => right; set => right = value; }
+        public Image[] Up { get => up; }
+        public Image[] Down { get => down; }
+        public Image[] Left { get => left; }
+        public Image[] Right { get => right; }
     }
 }
