@@ -65,6 +65,20 @@ namespace Tanks
                 Thread.Sleep(speedGame);
                 foreach (Tank t in tanks)
                     t.Run();
+
+                for (int i = 0; i < tanks.Count - 1; i++)
+                    for (int j = 1; j < tanks.Count; j++)
+                        if (
+                                Math.Abs(tanks[i].X - tanks[j].X) <= 30 && tanks[i].Y ==tanks[j].Y
+                            ||
+                                Math.Abs(tanks[i].Y - tanks[j].Y) <= 30 && tanks[i].X == tanks[j].X
+                            ||
+                                Math.Abs(tanks[i].X - tanks[j].X) <= 30 && Math.Abs(tanks[i].Y - tanks[j].Y) <= 30
+                            )
+                        {
+                            tanks[i].TurnArroud();
+                            tanks[j].TurnArroud();
+                        }
             }
         }
     }
