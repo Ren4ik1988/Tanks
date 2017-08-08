@@ -22,6 +22,12 @@ namespace Tanks
             this.model = model;
         }
 
+        void DrawApple(PaintEventArgs e)
+        {
+            foreach (Apple a in model.Apples)
+                e.Graphics.DrawImage(a.Img, new Point(a.X, a.Y));
+        }
+
         void DrawWall(PaintEventArgs e)
         {
             for (int i = 30; i < 390; i += 60)

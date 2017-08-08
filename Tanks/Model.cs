@@ -21,9 +21,13 @@ namespace Tanks
         List<Tank> tanks;
         internal List<Tank> Tanks { get => tanks; }
 
+        List<Apple> apples;
+        internal List<Apple> Apples { get => apples; }
+
         public Model(int sizeField, int amountTanks, int amountApples, int speedGame)
         {
             tanks = new List<Tank>();
+            apples = new List<Apple>();
             this.sizeField = sizeField;
             this.amountTanks = amountTanks;
             this.amountApples = amountApples;
@@ -31,9 +35,32 @@ namespace Tanks
             r = new Random();
 
             CreateTanks();
+            CreateApples();
             wall = new Wall();
 
             gameStatus = GameStatus.stoping;
+        }
+
+        private void CreateApples()
+        {
+            int x, y;
+            while (apples.Count < amountApples)
+            {
+                x = r.Next(7) * 60;
+                y = r.Next(7) * 60;
+                bool flag = true;
+
+                foreach (Apple a in apples)
+                    if (a.X == x && a.Y == y)
+                    {
+                        flag = false;
+                        break;
+                    }
+
+                if (flag)
+                    tanks.Add(new Tank(sizeField, x, y));
+
+            }
         }
 
         private void CreateTanks()
@@ -41,8 +68,8 @@ namespace Tanks
             int x, y;
             while (tanks.Count < amountTanks)
             {
-                x = r.Next(6) * 60;
-                y = r.Next(6) * 60;
+                x = r.Next(7) * 60;
+                y = r.Next(7) * 60;
                 bool flag = true;
 
                 foreach (Tank t in Tanks)

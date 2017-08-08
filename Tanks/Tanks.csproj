@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apple.cs" />
+    <Compile Include="AppleImg.cs" />
     <Compile Include="Controller_MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +108,7 @@
     <None Include="Resources\Wall.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Apple.bmp" />
     <Content Include="Resources\TankGusenitsa\TankDown\TankDown.bmp" />
     <Content Include="Resources\TankGusenitsa\TankDown\TankDown1.bmp" />
     <Content Include="Resources\TankGusenitsa\TankDown\TankDown2.bmp" />
